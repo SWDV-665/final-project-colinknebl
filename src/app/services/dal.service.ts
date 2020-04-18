@@ -8,11 +8,10 @@ export class DalService {
 
 	constructor() {}
 
-	public save(title: string, data: string): number {
+	public save(data: string): number {
 		const scans = this.fetch();
 		const numOfScans = scans.unshift({
 			date: new Date(),
-			title,
 			data,
 		});
 		this._commit(scans);
@@ -32,6 +31,5 @@ export class DalService {
 
 interface IScan {
 	date: Date;
-	title: string;
 	data: string;
 }
