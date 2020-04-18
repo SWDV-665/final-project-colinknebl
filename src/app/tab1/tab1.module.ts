@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { ToastController } from '@ionic/angular';
 
 @NgModule({
 	imports: [
@@ -15,5 +16,6 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 		RouterModule.forChild([{ path: '', component: Tab1Page }]),
 	],
 	declarations: [Tab1Page],
+	providers: [ToastController],
 })
 export class Tab1PageModule {}
