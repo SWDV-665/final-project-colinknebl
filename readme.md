@@ -20,7 +20,7 @@ npm install
 3. start local server
 
 ```
-npm run start
+npm run serve
 ```
 
 4. open browser at http://localhost:8100
