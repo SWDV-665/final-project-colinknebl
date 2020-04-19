@@ -1,17 +1,10 @@
 import { Injectable } from '@angular/core';
-import {
-	Plugins,
-	CameraResultType,
-	Capacitor,
-	FilesystemDirectory,
-	CameraPhoto,
-	CameraSource,
-} from '@capacitor/core';
+import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
 
 import QrCode from 'qrcode-reader';
 import { DalService } from './dal.service';
 
-const { Camera, Filesystem, Storage } = Plugins;
+const { Camera } = Plugins;
 
 @Injectable({
 	providedIn: 'root',
