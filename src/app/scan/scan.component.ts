@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-scan',
@@ -6,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./scan.component.scss'],
 })
 export class ScanComponent implements OnInit {
-	constructor() {
-		console.log('scan constructor');
-	}
+	@Input() date: string;
+
+	@Input() data: string;
+
+	constructor() {}
 
 	ngOnInit() {
-		console.log('on init!');
+		if (this.date) {
+			this.date = this.formattedDate(new Date(this.date));
+		}
+	}
+
+	public formattedDate(d: Date): string {
+		return `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
 	}
 }
