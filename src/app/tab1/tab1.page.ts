@@ -17,7 +17,6 @@ export class Tab1Page {
 		this.photoService
 			.addNewToGallery()
 			.then(async () => {
-				console.log('success!');
 				const toast = await this.toastController.create({
 					message: 'Scan successful!',
 					duration: 5000,
