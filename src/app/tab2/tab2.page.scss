@@ -1,3 +1,10 @@
 ion-content ion-toolbar {
-  --background: translucent;
+	--background: translucent;
+}
+
+.no-scans-message {
+	text-align: center;
+	margin: 20px;
+	display: block;
+	font-size: 25px;
 }

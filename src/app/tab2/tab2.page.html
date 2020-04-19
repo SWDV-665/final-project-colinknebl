@@ -13,5 +13,20 @@
 		</ion-toolbar>
 	</ion-header>
 
-	<app-explore-container name="Tab 2 page"></app-explore-container>
+	<div *ngIf="scans.length > 0; then list else noScans"></div>
+
+	<ng-template #list
+		><ion-list>
+			<app-scan
+				*ngFor="let scan of scans; let i = index"
+				date="{{scan.date}}"
+				data="{{scan.data}}"
+			></app-scan> </ion-list
+	></ng-template>
+
+	<ng-template #noScans>
+		<ion-text class="no-scans-message">
+			You do not have any saved scans
+		</ion-text>
+	</ng-template>
 </ion-content>
